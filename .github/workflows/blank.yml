@@ -27,7 +27,9 @@ jobs:
       
       # install dependencies
       - name: install dependencies
-        run: sudo apt install repo
+        run: |
+          sudo apt update
+          sudo apt install repo
 
       # setup the repo
       - name: repo sync
