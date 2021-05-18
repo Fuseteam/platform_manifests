@@ -28,11 +28,11 @@ jobs:
       # install dependencies
       - name: install dependencies
         run: |
-          sudo curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo
-          sudo chmod a+x /usr/local/bin/repo
+          curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+          chmod a+x ~/bin/repo
 
       # setup the repo
       - name: repo sync
         run: |
-          repo init -u https://github.com/anbox/platform_manifests.git -b anbox
-          repo sync -j4
+          ~/bin/repo init -u https://github.com/anbox/platform_manifests.git -b anbox
+          ~/bin/repo sync -j4
