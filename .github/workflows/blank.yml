@@ -28,8 +28,8 @@ jobs:
       # install dependencies
       - name: install dependencies
         run: |
-          sudo apt update
-          sudo apt install repo
+          sudo curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo
+          sudo chmod a+x /usr/local/bin/repo
 
       # setup the repo
       - name: repo sync
